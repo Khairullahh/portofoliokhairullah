@@ -1,0 +1,872 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+:root {
+  --bg-color: black;
+  --second-bg-color: black;
+  --text-color: white;
+  --main-color: red;
+  --hd-color: grey;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* home */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 20%;
+}
+
+.header.sticky {
+  border-bottom: 0.1rem solid red;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: default;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 50%;
+}
+
+.navbar a {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: 0.3s;
+  border: 0.1rem solid var(--main-color);
+  border-radius: 30%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+#menu-icon {
+  background: var(--main-color);
+  display: none;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-img img {
+  width: 34vw;
+  border: 0.5rem solid var(--main-color);
+  border-radius: 15%;
+}
+
+.home-content h3 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--main-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+/* home */
+
+/* about */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color);
+}
+
+.about-img img {
+  width: 21vw;
+  margin-right: 40rem;
+  border: 0.5rem solid var(--main-color);
+  border-radius: 20%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content {
+  margin-right: 5rem;
+}
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 50%;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+/* about */
+
+/* about me */
+.aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color);
+}
+/* kembali ke about,aboutme dari aboutme,maps */
+.btnn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--text-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+  margin-bottom: 5rem;
+}
+
+.btnn:hover {
+  box-shadow: none;
+}
+/* kembali ke about,aboutme dari aboutme,maps */
+
+.headinng {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-top: 1rem;
+}
+
+.aboutme-content h2 {
+  line-height: 1.2;
+}
+
+.aboutme-content p {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: 0.1rem solid var(--main-color);
+}
+
+/* otw ke maps dari aboutme */
+.btnnn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--text-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+  margin-top: 5rem;
+  margin-left: 80rem;
+}
+
+.btnnn:hover {
+  box-shadow: none;
+}
+/* otw ke maps dari aboutme */
+
+/* otw ke music dari aboutme */
+.btnnnn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--text-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+  margin-left: 80rem;
+}
+
+.btnnnn:hover {
+  box-shadow: none;
+}
+/* otw ke music dari aboutme */
+
+/* balik ke aboutme dari music */
+.btnnnnn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 0.5rem;
+  color: var(--text-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+  margin-bottom: 5rem;
+}
+
+.btnnnnn:hover {
+  box-shadow: none;
+}
+/* balik ke aboutme dari music */
+
+/* about me */
+
+/* maps */
+.maps .row {
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.maps h2 {
+  margin-bottom: 3rem;
+  margin-left: 48rem;
+  font-size: 5rem;
+}
+
+.maps p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.maps .row .map {
+  margin-top: 4rem;
+  min-height: 40vh;
+}
+/* maps */
+
+/* videomusic */
+
+.video {
+  background: var(--second-bg-color);
+}
+
+.video h2 {
+  margin-bottom: 4rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 50%;
+}
+
+.video a {
+  font-size: 3rem;
+  color: var(--text-color);
+  transition: 0.3s;
+  border: 0.1rem solid var(--main-color);
+  border-radius: 30%;
+}
+
+.video a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.video-container .video-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--text-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.video-box video {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.video-box:hover video {
+  transform: scale(1.1);
+}
+/* videomusic */
+
+/* skills */
+.skills {
+  background: var(--second-bg-color);
+  text-align: center;
+  margin-right: 3rem;
+}
+
+.skill {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.skill h2 {
+  border: 0.1rem solid var(--text-color);
+  border-radius: 50%;
+}
+
+.skill-main {
+  display: flex;
+  flex-direction: column; /* Mengubah perataan ke vertikal */
+  align-items: center; /* Untuk meletakkan elemen di tengah horizontal */
+  text-align: center; /* Untuk mengatur teks menjadi di tengah */
+  margin-top: 5rem;
+  font-size: 3rem;
+}
+
+
+.skill-bar {
+  margin-bottom: 2.3rem;
+}
+
+.skill-main h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.skill-mid .skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+
+.skill-mid .skill-bar .bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--text-color);
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skill-bar .bar span {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: var(--main-color);
+  border-radius: 25px;
+  box-shadow: var(--main-color);
+}
+
+.skill-bar .bar .HTML {
+  width: 50%;
+  animation: HTML 2s;
+}
+
+.skill-bar .bar .CSS {
+  width: 50%;
+  animation: CSS 3s;
+}
+
+.skill-bar .bar .JAVASCRIPT {
+  width: 50%;
+  animation: JAVASCRIPT 4s;
+}
+
+.skill-bar .bar .PHP {
+  width: 50%;
+  animation: PHP 5s;
+}
+/* skills */
+
+/* project */
+.project {
+  background: var(--second-bg-color);
+}
+
+.project h2 {
+  margin-bottom: 4rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 50%;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.project-container .project-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--text-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.project-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.project-box:hover img {
+  transform: scale(1.1);
+}
+
+.project-box .project-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.project-box:hover .project-layer {
+  transform: translateY(0);
+}
+
+.project-layer h4 {
+  font-size: 3rem;
+}
+
+.project-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+.project-layer a i {
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+/* project */
+
+/* contact */
+.contact h2 {
+  margin-bottom: 3rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 50%;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--main-color);
+  background-color: var(--text-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/* contact */
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--main-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.footer-text p:hover {
+  color: var(--bg-color);
+  box-shadow: 0 0 1rem var(--bg-color);
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 50%;
+}
+
+.footer-iconTop a:hover {
+  background: var(--main-color);
+  color: var(--main-color);
+  box-shadow: 0 0 1rem var(--bg-color);
+}
+
+/* footer */
+
+/* keyframes */
+@keyframes HTML {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes CSS {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes JAVASCRIPT {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes PHP {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+/* keyframes */
+
+/* breakpoints */
+/* CSS untuk perangkat berukuran hingga 1200px */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* CSS untuk perangkat berukuran hingga 991px */
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .skills {
+    padding-bottom: 3rem;
+  }
+
+  .project {
+    padding-bottom: 3rem;
+  }
+
+  .contact {
+    min-height: auto;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* CSS untuk perangkat berukuran hingga 768px */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .header {
+    padding: 2rem 3%;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--hd-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-img img {
+    width: 60vw;
+    margin-top: 6rem;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about img {
+    width: 50vw;
+    margin: auto;
+  }
+
+  .about-content {
+    text-align: center; /* Perubahan: Pusatkan konten teks pada perangkat berukuran kecil */
+  }
+
+  .aboutme-content {
+    padding: 2rem;
+    text-align: left; 
+  }
+
+  .aboutme-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .aboutme-content p {
+    font-size: 1.8rem;
+  }
+
+  .btnn, .btnnnn, .btnnn {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .btnnnn {
+    float: right;
+    padding: 10px;
+  }
+  
+  .skills h2 {
+    text-align: center; /* Mengatur judul 'Skill Saya' menjadi di tengah */
+  }
+
+  .project h2 {
+    margin-bottom: 3rem;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+}
+
+/* CSS untuk perangkat berukuran hingga 617px */
+@media (max-width: 617px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+/* CSS untuk perangkat berukuran hingga 450px */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+
+  .skill-bar {
+    width: 100%;
+  }
+}
+
+/* CSS untuk perangkat berukuran hingga 365px */
+@media (max-width: 365px) {
+  .home-img img {
+    width: 90vw;
+  }
+
+  .about-img img {
+    width: 90vw;
+  }
+
+  .skill-bar {
+    padding: 1rem 0;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+/* breakpoints */
